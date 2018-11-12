@@ -105,15 +105,15 @@ def hit_or_stand(deck, hand):
         break 
 
 def show_some(player, dealer):
-    print("/nDealer's Hand")
+    print("/n Dealer's Hand ")
     print("HIDDEN CARD")
     print('', dealer.cards[1])
-    print("/nPlayer's Hand:", *player.cards, sep='/n ')
+    print("/n Player's Hand: ", *player.cards, sep='/n ')
 
 def show_all(player, dealer):
-    print("/nDealer's Hand", *dealer.cards, sep='/n ')
-    print("Dealer's Hand =", dealer.value)
-    print("/nPlayer's Hand:", *player.cards, sep='/n ')
+    print("/n Dealer's Hand ", *dealer.cards, sep='/n ')
+    print("Dealer's Hand = " , dealer.value)
+    print("/n Player's Hand: ", *player.cards, sep='/n ')
     print("Player's Hand = ", player.value)
 
 
@@ -136,12 +136,31 @@ def dealer_wins(player,dealer,chips):
 def push(player, dealer):
     print("Dealer and Player tie! It's a push.") 
 
-test_deck = Deck()
-test_deck.shuffle()
-test_player = Hand()
-test_player.add_card(test_deck.deal())
-test_player.add_card(test_deck.deal())
-print(test_player.value)
+###TIE THE GAME TOGETHER###
+while True:
+    print('Welcome to Blackjack! Get ready to play to win!!!')
 
-for card in test_player.cards:
-    print(card)
+    deck = Deck()
+    deck.shuffle
+    
+    player_hand = Hand()
+    player_hand.add_card(deck.deal())
+    player_hand.add_card(deck.deal())
+
+    dealer_hand = Hand()
+    dealer_hand.add_card(deck.deal())
+    dealer_hand.add_card(deck.deal())
+    
+    player_chips = Chips()
+
+    take_bet(player_chips)
+
+    show_some(player_hand, dealer_hand)
+
+    while playing: 
+        
+
+
+
+
+    
